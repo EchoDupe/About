@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/title.png" width="380" alt="EchoDupe Logo">
-
 # 📑 ECHODUPE | NETWORK DIRECTORY
 **The official summary and mission briefing for the EchoDupe Ecosystem.**
 
@@ -25,8 +23,6 @@ EchoDupe operates as a multi-node digital network. We specialize in industrial-n
 [**INDUSTRIAL PORTAL**](https://echodupe-hub.netlify.app) • [**GAMES TERMINAL**](https://echodupe.github.io/Games/)
 
 ---
-
-<img src="assets/ComingSoon.png" width="100%" alt="Banner">
 
 <br>
 
