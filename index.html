@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoDupe | About the Network</title>
+    <link rel="icon" type="image/png" href="assets/title.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --neon: #06b6d4; }
+        body { 
+            background-color: #020202; 
+            color: #fff; 
+            font-family: 'Inter', sans-serif; 
+            min-height: 100vh;
+        }
+
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px), 
+                              linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+            position: fixed; inset: 0; z-index: -1;
+        }
+
+        .about-card {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-left: 4px solid var(--neon);
+            border-right: 1px solid rgba(6, 182, 212, 0.1);
+            border-top: 1px solid rgba(6, 182, 212, 0.1);
+            border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .about-card:hover {
+            background: rgba(15, 15, 25, 0.9);
+            border-right: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .section-header {
+            font-family: 'Courier Prime', monospace;
+            color: var(--neon);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .scanline {
+            width: 100%; height: 100vh; position: fixed; pointer-events: none; z-index: 100;
+            background: linear-gradient(to bottom, transparent 50%, rgba(6, 182, 212, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="scanline"></div>
+
+    <nav class="w-full border-b border-white/5 backdrop-blur-xl sticky top-0 z-[100]">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-8 py-8">
+            <h1 class="text-3xl font-black italic tracking-tighter uppercase">
+                ECHODUPE<span class="text-cyan-500">_INFO</span>
+            </h1>
+            <div class="text-[9px] font-black text-zinc-500 tracking-[0.4em] uppercase">Status: Secure_Node</div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        
+        <section class="mb-24">
+            <div class="section-header mb-6">// CLASSIFIED_BRIEFING</div>
+            <h2 class="text-6xl font-black italic uppercase leading-none mb-10 tracking-tighter">
+                Integrated <span class="text-cyan-500">Neural</span><br>Systems.
+            </h2>
+            <p class="text-zinc-400 text-xl leading-relaxed max-w-2xl font-medium">
+                EchoDupe is an advanced digital ecosystem. We develop industrial-grade web portals and high-fidelity neural simulations.
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            <div class="about-card p-10 rounded-tr-3xl">
+                <div class="text-cyan-500 mb-6 text-2xl"><i class="fa-solid fa-layer-group"></i></div>
+                <h4 class="text-2xl font-black uppercase italic mb-3">Main Portal</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed mb-8">
+                    The central nervous system of our network. Access industrial tools and core EchoDupe data.
+                </p>
+                <a href="https://echodupe-hub.netlify.app" target="_blank" class="inline-block px-6 py-2 border border-cyan-500/20 text-[10px] font-black text-cyan-500 tracking-widest uppercase hover:bg-cyan-500/10 transition">Connect_Link</a>
+            </div>
+
+            <div class="about-card p-10 rounded-tr-3xl">
+                <div class="text-cyan-500 mb-6 text-2xl"><i class="fa-solid fa-microchip"></i></div>
+                <h4 class="text-2xl font-black uppercase italic mb-3">Games Node</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed mb-8">
+                    A dedicated environment for experimental simulations and high-performance gaming nodes.
+                </p>
+                <a href="https://echodupe.github.io/Games/" target="_blank" class="inline-block px-6 py-2 border border-cyan-500/20 text-[10px] font-black text-cyan-500 tracking-widest uppercase hover:bg-cyan-500/10 transition">Connect_Link</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-24 text-center border-t border-white/5">
+        <img src="assets/title.png" class="h-10 mx-auto opacity-30 mb-10">
+        <p class="text-[10px] font-black text-zinc-700 tracking-[0.5em] uppercase italic">
+            &copy; 2026 ECHODUPE INDUSTRIES // SKITXOE
+        </p>
+    </footer>
+
+</body>
+</html>
