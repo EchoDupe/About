@@ -7,7 +7,8 @@ const EchoData = {
         { label: 'Game Build', v: 'v1.2.1' },
         { label: 'About Build', v: 'v1.0.6' }
     ],
-    hub: "https://echodupe.pages.dev/",
+    // Ensure these ALWAYS start with https://
+    hub: "https://echodupe.pages.dev",
     staff: "https://echodupe.pages.dev/staff",
     rules: "https://echodupe.pages.dev/Rules",
     discord: "https://discord.gg/aH2SyywD2x",
@@ -46,9 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
         const url = EchoData[key];
 
         if (url) {
-            el.setAttribute('href', url);
-            el.setAttribute('target', '_blank');
-            el.setAttribute('rel', 'noopener noreferrer');
+            // Force the element to be a proper external link
+            el.href = url;
+            el.target = "_blank";
+            el.rel = "noopener noreferrer";
         }
     });
 
