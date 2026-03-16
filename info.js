@@ -2,20 +2,17 @@
  * ECHODUPE CORE DATA
  */
 const EchoData = {
-    // Versions for HUD
     versions: [
         { label: 'Shop Build', v: 'v2.0.0' },
         { label: 'Game Build', v: 'v1.2.1' },
         { label: 'About Build', v: 'v1.0.6' }
     ],
-
-    // Public Links & Info
+    hub: "https://echodupe.pages.dev/",
+    staff: "https://echodupe.pages.dev/staff",
+    rules: "https://echodupe.pages.dev/Rules",
     discord: "https://discord.gg/aH2SyywD2x",
-    serverIP: "play.echodupels.minehut.gg",
-    hub: "https://echodupe.pages.dev", // Updated to Cloudflare
     games: "https://echodupe.github.io/Games/",
-    staff: "https://echodupe.pages.dev/staff", // Updated to Cloudflare
-    rules: "https://echodupe.pages.dev/rules"  // Updated to Cloudflare
+    serverIP: "play.echodupels.minehut.gg"
 };
 
 // 1. GENERATE VERSION HUD
@@ -42,11 +39,17 @@ versionHUD.innerHTML = EchoData.versions.map(item => `
 `;
 document.body.appendChild(versionHUD);
 
-// 2. AUTO-FILL HTML & COPY FEATURE
+// 2. AUTO-FILL & NEW TAB LOGIC
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-link]').forEach(el => {
         const key = el.getAttribute('data-link');
-        if (EchoData[key]) el.href = EchoData[key];
+        const url = EchoData[key];
+
+        if (url) {
+            el.setAttribute('href', url);
+            el.setAttribute('target', '_blank');
+            el.setAttribute('rel', 'noopener noreferrer');
+        }
     });
 
     document.querySelectorAll('[data-text]').forEach(el => {
@@ -56,7 +59,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const copyTarget = document.querySelector('[data-copy="serverIP"]');
     if (copyTarget) {
-        copyTarget.addEventListener('click', () => {
+        copyTarget.addEventListener('click', (e) => {
+            e.preventDefault();
             navigator.clipboard.writeText(EchoData.serverIP).then(() => {
                 const originalText = copyTarget.innerText;
                 copyTarget.innerText = "COPIED!";
